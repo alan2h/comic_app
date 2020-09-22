@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeroeComponent implements OnInit {
 
-  private heroe:any = {};
+  public heroe:any = {};
 
   constructor( 
     private activatedRoute:ActivatedRoute,

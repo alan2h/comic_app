@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-2">  
+    <div *ngFor="let item of heroes; let i = index;" class="col mb-4">
+        <div class="card">
+          <img [src]="item.img" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">{{ item.nombre }}</h5>
+              <p class="card-text">{{ item.bio }}</p>
+              <!-- <button class="btn btn-info">ver mas </button>-->
+              <a (click)="verHeroe(i)"  class="btn btn-info">ver mas </a>
+          </div>
+        </div>
+      </div>      
+</div>
