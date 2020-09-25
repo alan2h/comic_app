@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-heroe-tarjeta',
@@ -8,10 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeroeTarjetaComponent implements OnInit {
 
   @Input() heroe: any = {};
+  @Input() index: number;
 
-  constructor() { }
+  @Output() heroeSeleccionado: EventEmitter<number>;
+
+  constructor() {
+    this.heroeSeleccionado = new EventEmitter();
+   }
 
   ngOnInit(): void {
+  }
+
+  verHeroe(i){
+    console.log(i, '<==========');
+    this.heroeSeleccionado.emit(i);
   }
 
 }

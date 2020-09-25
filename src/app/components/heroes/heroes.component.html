@@ -3,7 +3,7 @@
   
   <!--   -->
 
-  <app-heroe-tarjeta [heroe]="item" *ngFor="let item of heroes; let i = index;"></app-heroe-tarjeta>
+  <app-heroe-tarjeta (heroeSeleccionado)="verHeroe( $event )" [heroe]="item" [index]="i" *ngFor="let item of heroes; let i = index;"></app-heroe-tarjeta>
 
     
   </div>

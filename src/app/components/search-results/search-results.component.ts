@@ -28,6 +28,7 @@ export class SearchResultsComponent implements OnInit {
   }
   verHeroe(idx:number){
     console.log(idx);
+    console.log(idx);
     this.router.navigate(['/heroe', idx]);
   }
 
