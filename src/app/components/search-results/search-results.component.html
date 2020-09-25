@@ -9,5 +9,11 @@
               <a (click)="verHeroe(i)"  class="btn btn-info">ver mas </a>
           </div>
         </div>
-      </div>      
+      </div>   
+      
+      <div *ngIf="heroes.length == 0">
+        <div class="alert alert-warning" role="alert">
+          This is a warning alert—check it out!
+        </div>
+      </div>
 </div>
